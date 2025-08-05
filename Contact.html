@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+{% block base %}contact{% endblock base %}
+{% block main %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +25,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="/home/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Contact</a>
+                        <a class="nav-link active" href="/about/">About</a>
                     </li>
                 </ul>
             </div>
@@ -123,7 +126,7 @@
             <!-- Team Member 6 -->
             <div class="col-md-4">
                 <div class="card team-card h-100">
-                    <img src="" class="card-img-top" alt="Picture of srinjoy">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQELCxzvP4v-7Q/profile-displayphoto-scale_400_400/B4EZh44bZ3HEAg-/0/1754374737652?e=1757548800&v=beta&t=nZaAI4WlM_UDxsObHtGDL0p0aE0PZtDMNWqQ26QNeA0" class="card-img-top" alt="Picture of srinjoy">
                     <div class="card-body text-center">
                         <h5 class="card-title">Srinjoy Halder</h5>
                         <p class="card-text text-muted">about page maker</p>
@@ -160,3 +163,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+{% endblock main %}
