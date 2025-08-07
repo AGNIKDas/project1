@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
+</head>
+<body>
+  
+<style>
+  *{
+      box-sizing: border-box;
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+    .carousel-item img{
+      height: 100vh;
+      object-fit: cover;
+    }
+    .rounded{
+      width: 350px;
+      height: 340px;
+    }
+    .bot-hist{
+      padding:0px 20px 5px 20px;
+    }
+    .intro-hist{
+      font-size:20px;
+      padding:0px 20px 0px 20px;
+    }
+    .detail-hist{
+      padding:0px 20px 0px 20px;
+      font-size:20px;
+    }
+    .thermos-hist{
+      padding-top:0px;
+      padding-left:20px;
+    }
+    .wine{
+      display:flex;
+      justify-content:space-around;
+      padding:20px;
+      font-size:20px;
+      gap:10px;
+    }
+    .thrmos-flask{
+      display:flex;
+      justify-content;space-around;
+      padding:20px;
+      font-size:22px;
+      gap:15px;
+    }
+    .modern-drink{
+      width: 40%;
+      height:70%;
+    }
+    .evolution-bottle{
+      padding:0px 20px 5px 20px;
+    }
+    .type-bottle{
+      padding-left: 30px;
+    }
+    .bg-transparent{
+      background-image: url(https://images.pond5.com/new-years-champagne-slow-motion-footage-032713251_iconl.jpeg);
+      
+    }
+    .typebottle{
+      display: flex;
+      justify-content: space-around;
+      gap: 15px;
+      padding: 30px;
+    }
+    .card-text{
+      list-style: none;
+    }
+    .diffbottle{
+      font-size: 30px;
+    }
+    .btn-danger{
+      font-size:25px;
+    }
+    .btn-outline-light{
+      margin: 40px;
+      margin-top: 0px;
+      font-size: 30px;
+    }
+    .card-bottle{
+        display: flex;
+      padding: 10px;
+      justify-content: space-around;
+    }
+    .dustbin{
+      padding: 10px 10px 10px 10px;
+      font-size: 45px;
+    }
+    .dust-head{
+      padding: 15px 20px 15px 50px;
+      font-size: 35px;
+    }
+    .bin{
+      font-size: 30px;
+      display: flex;
+      justify-content: space-around;
+    }
+    .green{
+      padding: 10px 50px 5px 50px;
+    }
+    .blue{
+      padding: 10px 50px 5px 50px;
+    }
+    .red{
+      padding: 10px 50px 5px 50px;
+    }
+    .yellow{
+      padding: 10px 50px 5px 50px;
+    }
+    .img-bin{
+      width:50%;
+      height: 45%;
+    }
+    .brown{
+      padding: 10px 50px 5px 50px;
+    }
+    .orange{
+      padding: 10px 50px 5px 50px;
+    }
+    .purple{
+      padding: 10px 50px 5px 50px;
+    }
+    .grey{
+      padding: 10px 50px 5px 50px;
+    }
+</style>
+
+
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="180">
+      <img src="https://images.news18.com/ibnlive/uploads/2021/08/1628483379_bottled-water-1600x1200.png" class="d-block w-100" alt="plastic bottle">
+        <div class="carousel-caption">
+        <h1 class="text-dark">Plastic Bottle</h1>
+        <a href="#about-history" class="btn btn-danger" data-bs-spy="scroll" data-bs-smooth-scroll="true">Know More</a>
+      </div> 
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://c0.wallpaperflare.com/preview/601/300/977/bottle-sand-beach-coast.jpg" class="d-block w-100" alt="glass bottle">
+        <div class="carousel-caption">
+        <h1>Glass Bottle</h1>
+        <a href="#about-history" class="btn btn-danger" data-bs-spy="scroll" data-bs-smooth-scroll="true" style="scroll-behavior:smooth">Know More</a>
+      </div> 
+    </div>
+    <div class="carousel-item">
+      <img src="https://media.istockphoto.com/id/1254195865/photo/reusable-water-bottle-on-a-concrete-background.jpg?s=612x612&w=0&k=20&c=EllXSyzY4A5egz1uOOfIlFzYzsn9K9zkmcK2Vqym_9s=" class="d-block w-100" alt="steel bottle">
+        <div class="carousel-caption">
+        <h1>Steel Bottle</h1>
+        <a href="#about-history" class="btn btn-danger" data-bs-spy="scroll" data-bs-smooth-scroll="true" style="scroll-behavior:smooth">Know More</a>
+      </div> 
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<section id="about-history" style="margin-top: 10px;">
+  <div class="h1 text-center bg-light bg-gradient" style="height: 52px;">Bottle History</div>
+  <img src="https://static-promotionsonly.com.au/blog/2023/june/3796-fw.png" class="img-fluid mx-auto d-block" alt="bottle history">
+  <hr class="border border-danger border-2 opacity-75 mx-auto d-block" style="width:60%;">
+  <h3 class="bot-hist">Short history of Drinking bottles</h3>
+  <p class="intro-hist">The invention of the modern-day drink bottle is a fascinating story that spans centuries of human history. From the earliest pottery vessels to today's advanced thermos flasks, the evolution of drink bottles is a testament to humanity's ingenuity and thirst for innovation.</p>
+  <h3 class="bot-hist">Early Drink Vessels</h3>
+  <p class="detail-hist">Humans have been using vessels to carry liquids for thousands of years. The earliest known drink containers were made from natural materials such as gourds, coconuts, and animal skins. These containers were used by various civilizations for storing water, wine, and other liquids.<br><br>
+    In ancient Egypt, water was carried in clay jars called amphorae, which were sealed with wax or stoppers made from animal skins. Similarly, the Greeks used amphorae to store and transport wine. These vessels were made from clay and had a narrow neck, allowing them to be carried on the back of donkeys or camels.<br><br>
+    During the Middle Ages, drinking vessels were made from materials such as leather, wood, and metal. These containers were often decorated with elaborate designs and were used by nobility and wealthy merchants. The common folk used pottery jugs, which were bulky and difficult to transport.<br>
+  </p><hr class="text-sucess mx-auto d-block" style="width:50%;">
+  <h3 class="bot-hist">The Evolution of the Modern Drink Bottle</h3>
+  <div class="wine">
+    <img src="https://i.pinimg.com/736x/3e/df/83/3edf83d8fdfbab4f2f758a8d6bf53695.jpg" class="rounded float-start" alt="wine bottle" style="width: 500px;">
+    <p>The modern drink bottle as we know it today began to take shape in the 19th century. The first patent for a modern beverage container was filed in 1888 by William Painter, an American inventor. Painter's invention was a metal cap with a cork lining that could be used to seal glass bottles.<br><br>
+      In 1903, Michael J. Owens invented the first automated bottle-making machine. This machine allowed for the mass production of glass bottles, making them more affordable and accessible to the general public. Glass bottles became the most popular way to package beverages such as milk, soda, and beer.<br><br>
+      In the 1940s, the plastic revolution began. Polyethylene terephthalate (PET) was invented in 1941 and soon became the material of choice for bottling carbonated beverages. Plastic bottles were lighter, cheaper, and more durable than glass bottles, and they were less likely to break during shipping.<br>
+    </p>
+  </div><hr class="mx-auto d-block" style="width:75%;">
+  <h3 class="thermos-hist text-center">The Invention of the Thermos Flask</h3>
+  <div class="thrmos-flask">
+    <img src="https://cdn.britannica.com/70/69070-050-4EE29518/James-Dewar.jpg?w=300" class="rounded float-start" alt="invented thermo flask">
+    <p>One of the most significant innovations in the history of drink bottles was the invention of the thermos flask. The thermos flask, also known as the vacuum flask, was invented by Sir James Dewar in 1892. Dewar was a Scottish chemist studying matter's properties at low temperatures.<br><br>
+      Dewar's invention consisted of two glass flasks with a vacuum between them. The vacuum created an insulating layer, preventing heat transfer and keeping liquids hot or cold for extended periods. The thermos flask revolutionized the way people carried and consumed drinks, especially during outdoor activities and travel.<br>
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Thermos.JPG/330px-Thermos.JPG" class="rounded float-end" alt="thermos flask">
+  </div>
+  <hr class="text-warning mx-auto d-block" style="width:75%;">
+  <img src="https://www.coca-colacompany.com/content/dam/company/us/en/articles/contour-100-bottle-line-up-1440x480.jpg/width1338.jpg" class="img-fluid rounded mx-auto d-block modern-drink" alt="drinking bottles">
+  <h3 class="evolution-bottle">The Evolution of Drink Bottles Today</h3>
+  <p class="detail-hist">
+    Today, drink bottles are available in a wide range of materials, shapes, and sizes. Some popular materials include plastic, glass, stainless steel, and silicone. Each material has its own advantages and disadvantages, making it suitable for different uses.<br><br>
+    Plastic bottles are lightweight and affordable, making them ideal for everyday use. However, they are not very durable and can leach harmful chemicals when exposed to high temperatures.<br>
+    Glass bottles are durable and non-toxic, making them popular for storing and transporting drinks. However, they can be heavy and breakable, making them less suitable for outdoor activities.<br>
+    Stainless steel bottles are durable and reusable, making them an eco-friendly alternative to plastic bottles. They can keep drinks hot or cold for extended periods, making them popular for outdoor enthusiasts.<br>
+    Silicone bottles are flexible and lightweight, making them easy to pack and carry. They are also durable and non-toxic, making them a safe and eco-friendly option for storing and transporting drinks.<br>
+  </p><hr class="border border-primary border-2 opacity-75 mx-auto d-block" style="width:60%;">
+  <h3 class="evolution-bottle text-center">Conclusion</h3>
+  <p class="detail-hist">
+    In conclusion, the evolution of drink bottles over time is a fascinating story highlighting human civilisation's innovation and ingenuity. From ancient times to the modern-day, humans have been using containers to store and transport liquids. The invention of the modern drink bottle in the 19th century revolutionized the way we package and consume beverages. The plastic revolution in the mid-20th century introduced a new era of lightweight and durable bottles, and the invention of the thermos flask in the 19th century paved the way for keeping drinks hot or cold for extended periods. Today, drink bottles come in a wide range of materials, shapes, and sizes to meet different needs and preferences. The evolution of drink bottles is an ongoing process, and we can expect to see more innovative designs and materials in the future.
+  </p>
+</section>
+
+<section id="types-bottle" class="bg-dark bg-transparent">
+  <hr class="text-danger">
+  <div class="h1 text-light type-bottle">Type of Bottles</div>
+  <div class="typebottle">
+    <div>
+      <p class="diffbottle text-light">Bottles are an ubiquitous part of modern life, used for storing and transporting a vast range of liquids, from beverages and food products to cosmetics and chemicals. While they may seem simple, bottles come in a surprising variety of types, each designed for a specific purpose. This diversity is rooted in their materials, shapes, and intended uses.</p>
+      <a href="#card-bottles" class="btn btn-outline-light">Learn More</a>
+    </div>
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/036/718/071/small_2x/ai-generated-a-row-of-different-colored-bottles-on-a-black-background-free-photo.jpg" class="rounded float-end" alt="bottle">
+  </div>
+</section>
+
+<section id="card-bottles">
+
+  <div  class="card-bottle">
+  <div class="card" style="width: 18rem;">
+  <img src="https://www.rasoishop.com/cdn/shop/products/8901372115366.jpg?v=1675153264" class="card-img-top" alt="plastic bottle">
+  <div class="card-body">
+    <h5 class="card-title text-center">Plastic Bottle</h5>
+    <ul class="card-text">
+      <li>Material: Plastic</li>
+      <li>Dustbin Category: Yellow or Blue</li>
+      <li>Describe Bin: Recyclable plastics (like PET) go in dry/recyclables bin</li>
+    </ul>
+  <a class="btn btn-outline-primary mx-auto d-block" data-bs-toggle="collapse" href="#collapsePlastic" role="button" aria-expanded="false" aria-controls="collapsePlastic">
+    Read More
+  </a>
+<div class="collapse" id="collapsePlastic">
+  <div class="card card-body">
+    Plastic bottle: Lightweight containers made primarily from various types of plastic, commonly used for water, beverages, and household products.
+  </div>
+</div>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://cdn.tc.promotron.com/web-images/1a0e366e-83d5-47f8-953c-44dbc5586551" class="card-img-top" alt="glass bottle">
+  <div class="card-body">
+    <h5 class="card-title text-center">Glasss Bottle</h5>
+    <ul class="card-text">
+      <li>Material: Glass bottle</li>
+      <li>Dustbin Category: Purple or Separate Glass Recycling Bin</li>
+      <li>Describe Bin: Only bottles and jars, not window glass or ceramics</li>
+    </ul>
+  <a class="btn btn-outline-primary mx-auto d-block" data-bs-toggle="collapse" href="#collapseGlass" role="button" aria-expanded="false" aria-controls="collapseGlass">
+    Read More
+  </a>
+<div class="collapse" id="collapseGlass">
+  <div class="card card-body">
+    Glass bottle: Rigid, transparent containers made from glass, often used for drinks, sauces, and pharmaceuticals due to their non-reactive properties.
+  </div>
+</div>
+
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://m.media-amazon.com/images/I/71J5rokiMrL._UF1000,1000_QL80_.jpg" class="card-img-top" alt="clay bottle">
+  <div class="card-body">
+    <h5 class="card-title text-center">Clay Bottle</h5>
+      <ul class="card-text">
+        <li>Material: Clay bottle</li>
+        <li>Dustbin Category: General Waste (Black or Grey Bin)</li>
+        <li>Describe Bin: Ceramic/clay usually not recycled dispose as general waste.</li>
+      </ul>
+  <a class="btn btn-outline-primary mx-auto d-block" data-bs-toggle="collapse" href="#collapseClay" role="button" aria-expanded="false" aria-controls="collapseClay">
+    Read More
+  </a>
+<div class="collapse" id="collapseClay">
+  <div class="card card-body">
+    Clay bottle: Traditional bottles made from fired clay, known for their natural insulation and ability to keep water cool.
+  </div>
+</div>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://www.jiomart.com/images/product/original/rvqt5vizka/linasha-stainless-steel-water-bottle-single-wall-hot-cold-water-cola-bottle-insulated-vacuum-flask-for-kids-school-500-ml-product-images-orvqt5vizka-p597858031-0-202301251427.jpg?im=Resize=(1000,1000)" class="card-img-top" alt="steel bottle">
+  <div class="card-body">
+    <h5 class="card-title text-center">Stainless Steel Bottle</h5>
+    <ul class="card-text">
+        <li>Material: Stainless Steel bottle</li>
+        <li>Dustbin Category: Dry Recycling Bin (Yellow/Blue)</li>
+        <li>Describe Bin: Metals like steel and aluminum are recyclable.</li>
+    </ul>
+  <a class="btn btn-outline-primary mx-auto d-block" data-bs-toggle="collapse" href="#collapseSteel" role="button" aria-expanded="false" aria-controls="collapseSteel">
+    Read More
+  </a>
+<div class="collapse" id="collapseSteel">
+  <div class="card card-body">
+    Stainless steel bottle: Durable, reusable bottles made from stainless steel; resistant to corrosion and often used for hot and cold beverages.
+  </div>
+</div>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://classicsteels.in/cdn/shop/files/ClassicSteelsMumbaiPremiumCopperBottle-d1037.jpg?v=1709792967" class="card-img-top" alt="copper bottle">
+  <div class="card-body">
+    <h5 class="card-title text-center">Copper Bottle</h5>
+    <ul class="card-text">
+        <li>Material:Copper bottle</li>
+        <li>Dustbin Category: Dry Recycling Bin (Yellow/Blue)</li>
+        <li>Describe Bin: Copper is recyclable and can go with other metals.</li>
+    </ul>
+  <a class="btn btn-outline-primary mx-auto d-block" data-bs-toggle="collapse" href="#collapseCopper" role="button" aria-expanded="false" aria-controls="collapseCopper">
+    Read More
+  </a>
+<div class="collapse" id="collapseCopper">
+  <div class="card card-body">
+    Copper bottle: Bottles made from copper, valued in some cultures for purported health benefits and antimicrobial properties.
+  </div>
+</div>
+  </div>
+</div>
+</div>
+
+<div class="card-bottle">
+
+  <div class="card" style="width: 18rem;">
+  <img src="https://m.media-amazon.com/images/I/51UZY2bbzOL.jpg" class="card-img-top" alt="rubber bottle">
+  <div class="card-body">
+    <h5 class="card-title text-center">Rubber Bottle</h5>
+    <ul class="card-text">
+        <li>Material: Rubber bottle</li>
+        <li>Dustbin Category: General Waste or Construction/Rubber Bin</li>
+        <li>Describe Bin:Rubber is special waste, not recyclable in regular bins—use construction waste bins.</li>
+    </ul>
+    <a class="btn btn-outline-primary mx-auto d-block" data-bs-toggle="collapse" href="#collapseRubber" role="button" aria-expanded="false" aria-controls="collapseRubber">
+      Read More
+    </a>
+<div class="collapse" id="collapseRubber">
+  <div class="card card-body">
+    Rubber bottle: Bottles constructed from recycled rubble or building debris, sometimes used in sustainable construction for insulation or decorative purposes, though not common for direct beverage storage.
+  </div>
+</div>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://www.darkknightarmoury.com/wp-content/uploads/2019/10/MH-MI0802-1.jpg" class="card-img-top" alt="Lether bottle">
+  <div class="card-body">
+    <h5 class="card-title text-center">Lether Bottle</h5>
+    <ul class="card-text">
+        <li>Material: Leather bottle</li>
+        <li>Dustbin Category: General Waste Bin (Black/Grey)</li>
+        <li>Describe Bin: Leather is not widely recycled, so dispose as general waste.</li>
+    </ul>
+  <a class="btn btn-outline-primary mx-auto d-block" data-bs-toggle="collapse" href="#collapseLeather" role="button" aria-expanded="false" aria-controls="collapseLeather">
+    Read More
+  </a>
+<div class="collapse" id="collapseLeather">
+  <div class="card card-body">
+    Leather bottle: Historical containers crafted from animal hide, once used to carry water or wine, mostly obsolete today, now day just use in desert living peoples to keep them hydrabad. 
+  </div>
+</div>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://m.media-amazon.com/images/I/51I3k3PAHWL._UF894,1000_QL80_.jpg" class="card-img-top" alt="aluminium botttle">
+  <div class="card-body">
+    <h5 class="card-title text-center">Aluminium Bottle</h5>
+    <ul class="card-text">
+        <li>Material: Aluminum bottles</li>
+        <li>Dustbin Category: Dry Recycling Bin (Yellow/Blue)</li>
+        <li>Describe Bin: Aluminum is recyclable, goes with metals.</li>
+    </ul>
+  <a class="btn btn-outline-primary mx-auto d-block" data-bs-toggle="collapse" href="#collapseAluminum" role="button" aria-expanded="false" aria-controls="collapseAluminum">
+    Read More
+  </a>
+<div class="collapse" id="collapseAluminum">
+  <div class="card card-body">
+    Aluminum bottles: Lightweight metal bottles, often lined to prevent corrosion, used for drinks, especially for portability.
+  </div>
+</div>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://m.media-amazon.com/images/I/41jWdCjxmSL._UF1000,1000_QL80_.jpg" class="card-img-top" alt="hdpe plastic bottle">
+  <div class="card-body">
+    <h5 class="card-title text-center">HDPE Plastic Bottle</h5>
+    <ul class="card-text">
+        <li>Material: HDPE Plastic Bottles</li>
+        <li>Dustbin Category: Yellow or Blue Recycling Bin</li>
+        <li>Describe Bin: Recyclable plastics segregate with other clean recyclables.</li>
+    </ul>
+  <a class="btn btn-outline-primary mx-auto d-block" data-bs-toggle="collapse" href="#collapseHDPE" role="button" aria-expanded="false" aria-controls="collapseHDPE">
+    Read More
+  </a>
+<div class="collapse" id="collapseHDPE">
+  <div class="card card-body">
+    HDPE Plastic Bottles: Bottles made from High-Density Polyethylene, a tough, food-safe plastic used for milk, detergents, and juices.
+  </div>
+</div>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://assets.ajio.com/medias/sys_master/root/20230719/TNfC/64b6efe2eebac147fc79323e/-473Wx593H-466314136-grey-MODEL2.jpg" class="card-img-top" alt="polyethylene bottle">
+  <div class="card-body">
+    <h5 class="card-title text-center">Polyethylene Trephthalate Bottle</h5>
+    <ul class="card-text">
+        <li>Material: Polyethylene terephthalate bottle</li>
+        <li>Dustbin Category: Yellow or Blue Recycling Bin</li>
+        <li>Describe Bin: PET plastic is highly recyclable.</li>
+    </ul>
+  <a class="btn btn-outline-primary mx-auto d-block" data-bs-toggle="collapse" href="#collapsePolyethylene" role="button" aria-expanded="false" aria-controls="collapsePolyethylene">
+    Read More
+  </a>
+<div class="collapse" id="collapsePolyethylene">
+  <div class="card card-body">
+   Polyethylene terephthalate bottle: Commonly known as PET bottles, they're clear, strong, and lightweight plastics widely used for soft drinks and water.
+  </div>
+</div>
+  </div>
+</div>
+
+</div>
+</section>
+
+<section id="dustbin-info">
+  <div class="h1 text-center bg-dark-subtle dustbin">Usage of Dustbin on Basis of Colours</div>
+  <div class="h2 dust-head">Green Dustbin</div>
+  <div class="green bin">
+    <img src="https://m.media-amazon.com/images/I/61Sqm8Q6PuL._UF1000,1000_QL80_.jpg" class="rounded float-start" alt="green bin">
+    <p>A green dustbin, often used for separating waste, is typically designated for biodegradable or organic materials. This can include food scraps, yard trimmings, and other compostable items. The purpose of using a green bin is to facilitate composting, which helps reduce the amount of waste sent to landfills and creates nutrient-rich soil. In some regions, however, the color coding may vary, and a green bin could be used for recycling glass bottles, plastics, or other specific materials.</p>
+  </div>
+  <div class="h2 dust-head">Blue Dustbin</div>
+  <div class="blue bin">
+    <p>A blue dustbin, often used for waste segregation, is typically designated for the collection of recyclable materials. These can include paper, cardboard, plastic bottles, metal cans, and certain types of glass. The use of a blue dustbin helps to separate these items from general waste, allowing them to be processed and reused, which contributes to environmental conservation and reduces the amount of waste sent to landfills.</p>
+    <img src="https://www.jiomart.com/images/product/original/rvomgqaul5/fiable-cleantech-center-pedal-operated-50-liter-dustbin-pedal-dustbin-foot-operated-waste-bin-trash-bin-large-size-plastic-bin-outdoor-dustbin-blue-product-images-orvomgqaul5-p598424500-0-202302160340.jpg?im=Resize=(420,420)" class="rounded float-end" alt="blue dustbin">
+  </div>
+  <div class="h2 dust-head">Red Dustbin</div>
+  <div class="red bin">
+    <img src="https://m.media-amazon.com/images/I/619vlM9gDkL._UF1000,1000_QL80_.jpg" class="rounded float-start" alt="red bin">
+    <p>A red dustbin is a type of waste container specifically designated for the disposal of certain kinds of waste. The color red is often used as a universal symbol for a particular category of waste, much like blue is for recycling or green is for compost.
+      The specific type of waste a red dustbin holds can vary depending on the local regulations or the facility where it's located. However, it's most commonly used for biohazardous waste (such as needles, bandages, and lab materials), non-recyclable waste, or specialized chemical waste.
+      In medical settings, red dustbins are crucial for preventing the spread of infection by safely containing contaminated materials. In residential areas or public spaces, they are typically used for waste that cannot be recycled or composted and is destined for a landfill. The clear labeling and color-coding of a red dustbin helps ensure that waste is sorted correctly, which is essential for environmental safety and public health.</p>
+  </div>
+  <div class="h2 dust-head">Yellow Dustbin</div>
+  <div class="yellow bin">
+    <p>A yellow dustbin is a type of waste receptacle specifically designated for the disposal of bio-medical waste. This category of waste includes items like used syringes, needles, surgical dressings, and other materials contaminated with bodily fluids. The color yellow serves as a universal indicator to identify these bins and ensure that their contents are handled with special care and disposed of according to strict safety protocols. This helps prevent the spread of infections and diseases.</p>
+    <img src="https://rukminim2.flixcart.com/image/704/844/xif0q/dustbin/2/3/l/bmw-bin-yellow-30-medisky-original-imah3yf8chjkdygz.jpeg?q=90&crop=false" class="rounded float-end" alt="yellow">
+  </div>
+  <hr class="text-warning mx-auto d-block" style="width: 70%;">
+  <img src="https://www.restock.com.au/documents/bin%20colour%20guide.jpg" class="img-fluid img-bin mx-auto d-block" alt="dust bins">
+  <hr class="text-primary mx-auto d-block" style="width: 70%;">
+  <div class="h2 dust-head">Brown Dustbin</div>
+  <div class="brown bin">
+    <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/plastic-trash-bin-brown-recycling-648WQ98-600.jpg" class="rounded float-start" alt="brown bin">
+    <p>A brown dustbin is typically used for disposing of garden waste, such as leaves, grass clippings, twigs, and small branches. It is also often used for food scraps and other organic materials that can be composted. The brown color helps to distinguish it from other bins, such as the green bin for recycling and the black bin for general waste, promoting proper waste segregation and composting.</p>
+  </div>
+  <div class="h2 dust-head">Orange Dustbin</div>
+  <div class="orange bin">
+    <p>An orange dustbin is a type of waste receptacle, typically made of plastic, that is designated for a specific type of waste. While the exact purpose can vary by location and local regulations, orange dustbins are most commonly used for recyclable waste like plastic bottles, paper, and cans. In other contexts, they may be used for general waste or biohazardous waste, particularly in medical or laboratory settings.
+      The vibrant color serves as a visual cue, helping people quickly identify the correct bin and sort their waste properly, which is crucial for effective waste management and recycling programs.</p>
+    <img src="https://4.imimg.com/data4/KD/DR/ANDROID-3088009/product.jpeg" class="rounded float-end" alt="orange bin">
+  </div>
+  <div class="h2 dust-head">Purple Dustbin</div>
+  <div class="purple bin">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIX26N5le9OujMCGQAMP7tLqAzmYCXhJs3wxH0lkuhyHAeT-rvxAQTBg3rNRA3nkHGu5A&usqp=CAU" class="rounded float-start" alt="purple">
+    <p>The purple dustbin is a special container used for the disposal of e-waste, or electronic waste. These bins are part of a recycling initiative to safely collect items like old phones, batteries, light bulbs, cables, and other small electronic devices. The purple color helps people easily identify which bin to use for their e-waste, preventing these materials from ending up in regular landfills where they can harm the environment.</p>
+  </div>
+  <div class="h2 dust-head">Grey Dustbin</div>
+  <div class="grey bin">
+    <p>Short description about the grey dustbin
+
+
+A grey dustbin is a container used for collecting and disposing of waste. Its color, grey, is often used to signify that it's for general waste or non-recyclable materials. This color coding helps with waste sorting and management, making it easier for people to separate their trash correctly. Grey dustbins are a common sight in both public and private spaces, from offices and homes to parks and streets. They come in various sizes and shapes to suit different needs.</p>
+    <img src="https://m.media-amazon.com/images/I/51-yRHUxgvL.jpg" class="rounded float-end" alt="grey bin">
+  </div>
+</section>
+
+<footer id="fot-info">
+  <div class="h3 bg-black bg-gradient text-light text-center">Thank Yoy For Visit Abouut Page. Hope You learned something.</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
