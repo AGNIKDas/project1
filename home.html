@@ -1,302 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Blog/game of a plastic bottle</title>
-</head>
-<body> <style> 
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.8rem;
-            color: #fff !important;
-        }
-        .navbar-nav .nav-link {
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.8) !important;
-            transition: color 0.3s ease;
-        }
-        .navbar-nav .nav-link:hover {
-            color: #fff !important;
-        }
-        .jumbotron {
-            background: linear-gradient(45deg, #007bff, #28a745); /* Blue to Green gradient */
-            color: white;
-            padding: 8rem 2rem;
-            margin-bottom: 0;
-            border-radius: 0;
-        }
-        .jumbotron h1 {
-            font-size: 4.5rem;
-            font-weight: 800;
-            line-height: 1.1;
-        }
-        .jumbotron p {
-            font-size: 1.5rem;
-            opacity: 0.9;
-        }
-        .section-title {
-            position: relative;
-            display: inline-block;
-            padding-bottom: 8px;
-            margin-bottom: 2.5rem;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 60%;
-            height: 3px;
-            background-color: #007bff; /* Primary blue */
-            border-radius: 9999px;
-        }
-        .card {
-            border: none;
-            border-radius: 0.75rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden;
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-        }
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
-        }
-        .btn-primary, .btn-outline-light {
-            border-radius: 50rem; /* Pill shape */
-            padding: 0.75rem 2rem;
-            font-weight: 600;
-            transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
-        }
-        .btn-primary:hover, .btn-outline-light:hover {
-            transform: translateY(-2px);
-        }
-        .bg-light-blue {
-            background-color: #e3f2fd; /* A very light blue */
-        }
-        footer {
-            background-color: #212529; /* Dark gray */
-            color: #adb5bd; /* Light gray text */
-        }
-        footer a {
-            color: #adb5bd;
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: #fff;
-        }
-    </style>
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#">Plastic Bottle Planet</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#games">Games</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+{% extends "base.html" %}
+{% block base %}home{% endblock base %}
+{% block main %}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-    <!-- Hero Section -->
-    <div class="jumbotron text-center">
-        <div class="container">
-            <h1 class="display-3 mb-4">Recycle, Reuse, Reimagine Plastic!</h1>
-            <p class="lead mb-5">
-                Discover the impact of plastic bottles, learn about recycling, and play fun games.
-            </p>
-            <div class="d-flex justify-content-center">
-                <a class="btn btn-light btn-lg mr-3 shadow-lg" href="#blog" role="button">Read Our Blog</a>
-                <a class="btn btn-outline-light btn-lg shadow-lg" href="#games" role="button">Play Games</a>
-            </div>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #e1e4ea;
+        color: #e6f1ff;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.5s ease;
+    }
+
+    #bottle-container {
+        position: absolute;
+        cursor: pointer;
+        transition: all 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+        z-index: 100;
+        filter: drop-shadow(0 0 10px rgba(64, 213, 235, 0.7));
+    }
+
+    #bottle {
+        width: 100px;
+        height: 160px;
+        background-image: url('https://i.pinimg.com/originals/6c/7b/82/6c7b82021f877d771de25225b0391e8d.gif');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease;
+    }
+
+    #bottle:hover {
+        transform: scale(1.1);
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+
+    .floating {
+        animation: float 3s ease-in-out infinite;
+    }
+</style>
+
+<body>
+    <div id="bottle-container">
+        <div id="bottle" class="floating" 
+            alt="Glass bottle with a rolled-up message inside, glowing with blue light, floating in dark space">
         </div>
     </div>
 
-    <!-- About Plastic Bottles Section -->
-    <section id="about" class="py-5 bg-white">
-        <div class="container">
-            <h2 class="text-center mb-5 section-title mx-auto">Understanding Plastic Bottles</h2>
-            <div class="row align-items-center">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="https://placehold.co/600x400/007bff/ffffff?text=Plastic+Bottle+Collection" alt="Collection of plastic bottles" class="img-fluid rounded shadow-lg">
-                </div>
-                <div class="col-md-6">
-                    <p class="lead">
-                        Plastic bottles are ubiquitous in our daily lives, from water bottles to cleaning product containers. While incredibly convenient, their widespread use poses significant environmental challenges, particularly regarding waste and pollution.
-                    </p>
-                    <p>
-                        Understanding the lifecycle of a plastic bottle, from production to disposal and recycling, is crucial for promoting sustainable practices. This section explores the types of plastics used, their environmental footprint, and the importance of responsible consumption and recycling.
-                    </p>
-                    <p>
-                        Join us in learning how we can all contribute to a healthier planet by making informed choices about plastic.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script>
+        const bottle = document.getElementById('bottle-container');
+        const bottleImg = document.getElementById('bottle');
+        let clicked = false;
 
-    <!-- Featured Blog Posts Section -->
-    <section id="blog" class="py-5 bg-light-blue">
-        <div class="container">
-            <h2 class="text-center mb-5 section-title mx-auto">Latest Insights on Plastic</h2>
-            <div class="row">
-                <!-- Blog Post 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://placehold.co/400x250/28a745/ffffff?text=Recycling+Symbol" class="card-img-top" alt="Recycling symbol on plastic bottle">
-                        <div class="card-body">
-                            <h5 class="card-title">The ABCs of Plastic Recycling: What Goes Where?</h5>
-                            <p class="card-text">Demystifying recycling symbols and ensuring your plastic bottles find their way to a new life.</p>
-                            <a href="#" class="btn btn-primary btn-sm">Read More &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Post 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://placehold.co/400x250/ffc107/343a40?text=DIY+Plastic+Crafts" class="card-img-top" alt="Creative plastic bottle crafts">
-                        <div class="card-body">
-                            <h5 class="card-title">10 Creative DIYs Using Repurposed Plastic Bottles</h5>
-                            <p class="card-text">Transform old plastic bottles into amazing crafts, home decor, and practical items!</p>
-                            <a href="#" class="btn btn-primary btn-sm">Read More &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Post 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://placehold.co/400x250/dc3545/ffffff?text=Ocean+Plastic" class="card-img-top" alt="Plastic pollution in ocean">
-                        <div class="card-body">
-                            <h5 class="card-title">The Ocean's Plastic Problem: A Call to Action</h5>
-                            <p class="card-text">Understanding the devastating impact of plastic pollution on marine life and ecosystems.</p>
-                            <a href="#" class="btn btn-primary btn-sm">Read More &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="#" class="btn btn-primary btn-lg">View All Blog Posts</a>
-            </div>
-        </div>
-    </section>
+        // Position the bottle randomly on page load
+        positionBottle();
 
-    <!-- Featured Games Section -->
-    <section id="games" class="py-5 bg-white">
-        <div class="container">
-            <h2 class="text-center mb-5 section-title mx-auto">Fun & Educational Plastic Bottle Games</h2>
-            <div class="row">
-                <!-- Game 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-light-blue">
-                        <img src="https://placehold.co/400x250/007bff/ffffff?text=Recycle+Sorter+Game" class="card-img-top" alt="Game screenshot: sorting bottles">
-                        <div class="card-body">
-                            <h5 class="card-title">Recycle Sorter Challenge</h5>
-                            <p class="card-text">Drag and drop plastic bottles into the correct recycling bins before time runs out!</p>
-                            <a href="#" class="btn btn-success btn-sm">Play Now &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Game 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-light-blue">
-                        <img src="https://placehold.co/400x250/28a745/ffffff?text=Ocean+Cleanup+Game" class="card-img-top" alt="Game screenshot: cleaning ocean plastic">
-                        <div class="card-body">
-                            <h5 class="card-title">Ocean Cleanup Adventure</h5>
-                            <p class="card-text">Navigate a boat and collect floating plastic bottles to clean up the ocean.</p>
-                            <a href="#" class="btn btn-success btn-sm">Play Now &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Game 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-light-blue">
-                        <img src="https://placehold.co/400x250/ffc107/343a40?text=Bottle+Flip+Master" class="card-img-top" alt="Game screenshot: bottle flip">
-                        <div class="card-body">
-                            <h5 class="card-title">Plastic Bottle Flip Master</h5>
-                            <p class="card-text">The classic bottle flip, but with a focus on plastic bottles! How many perfect flips can you get?</p>
-                            <a href="#" class="btn btn-success btn-sm">Play Now &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="#" class="btn btn-primary btn-lg">Explore All Games</a>
-            </div>
-        </div>
-    </section>
+        // Click event to redirect
+        bottle.addEventListener('click', function() {
+            if (!clicked) {
+                clicked = true;
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light-blue">
-        <div class="container">
-            <h2 class="text-center mb-5 section-title mx-auto">Connect With Us</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card p-4 shadow-lg">
-                        <p class="text-center lead mb-4">Have a question about plastic, a recycling tip, or a game idea?</p>
-                        <form>
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control rounded-pill" id="name" placeholder="Your Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email address</label>
-                                <input type="email" class="form-control rounded-pill" id="email" placeholder="name@example.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea class="form-control rounded-lg" id="message" rows="5" placeholder="Your message here..."></textarea>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="py-4 text-center">
-        <div class="container">
-            <p class="mb-1">&copy; 2025 Plastic Bottle Planet. All rights reserved.</p>
-            <ul class="list-inline mb-0">
-                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-                <li class="list-inline-item"><a href="#">Terms of Use</a></li>
-            </ul>
-        </div>
-    </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+                // Optional: Bottle animation to center first
+                bottleImg.classList.remove('floating');
+                bottle.style.left = '50%';
+                bottle.style.top = '50%';
+                bottle.style.transform = 'translate(-50%, -50%) scale(1.2)';
+
+                // Redirect after short delay
+                setTimeout(function() {
+                    window.location.href = "new.html";
+                }, 1000);
+            }
+        });
+
+        function positionBottle() {
+            const corner = Math.floor(Math.random() * 4);
+            const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+            const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+
+            let left, top;
+            switch(corner) {
+                case 0: left = '20px'; top = '20px'; break;
+                case 1: left = vw - 120 + 'px'; top = '20px'; break;
+                case 2: left = '20px'; top = vh - 180 + 'px'; break;
+                case 3: left = vw - 120 + 'px'; top = vh - 180 + 'px'; break;
+            }
+
+            bottle.style.left = left;
+            bottle.style.top = top;
+            bottle.style.transform = 'none';
+        }
+
+        // Reposition on resize (if still floating)
+        window.addEventListener('resize', function() {
+            if (!clicked) positionBottle();
+        });
+    </script>
 </body>
-
-</html>
-
+{% endblock main %}
