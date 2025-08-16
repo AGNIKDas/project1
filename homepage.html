@@ -1,0 +1,221 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- Pixel font -->
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  :root{
+
+    --glass: #7fd1c9;
+    --aqua:  #d36d07ff;
+    --amber: #ffb84d;
+    --ink:   #1c1f22;
+    --paper: #f2f2f2;
+    --shadow: #0e0f11;
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    height: 100%;
+    background:
+      repeating-linear-gradient(0deg, #eaeaea 0 2px, #eaeaea 2px 2px, #f7f7f7 2px 6px); /* subtle tiled paper */
+    font-family: "Press Start 2P", system-ui, sans-serif;
+    color: var(--ink);
+    image-rendering: pixelated;
+  }
+
+
+  .pixel-frame{
+    border: 6px solid var(--ink);
+    box-shadow:
+      0 0 0 6px var(--paper),
+      8px 8px 0 0 var(--shadow); 
+  }
+
+ 
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(0.5px);
+    background: rgba(255,255,255,0.72);
+    padding: 18px 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    border-bottom: 6px solid var(--ink);
+  }
+  header .brand{
+    display: inline-block;
+    padding: 10px 14px;
+    background: linear-gradient(90deg, var(--glass), var(--aqua));
+    color: #0b0d0f;
+    text-transform: uppercase;
+    font-size: clamp(14px, 2.7vw, 22px);
+    line-height: 1;
+    box-shadow: 0 0 0 6px var(--ink), 8px 8px 0 0 var(--shadow);
+  }
+
+ 
+  .shell{
+    max-width: 1200px;
+    margin: 24px auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-gap: 18px;
+  }
+
+ 
+  .notice{
+    background: #fff;
+    padding: 14px 10px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .stack{ display: grid; gap: 18px; }
+
+
+  .stage{
+    position: relative;
+    height: min(70vh, 640px);
+    background: #000;
+    overflow: hidden;
+  }
+  .stage video{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transform: scale(1.001); /* nudge for some browsers */
+    filter: saturate(1.1) contrast(1.05) brightness(0.95);
+  }
+
+  .stage::after{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      radial-gradient(#00000022 35%, transparent 36%) 0 0/6px 6px;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+
+  .stage .overlay{
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 24px;
+  }
+  .overlay .card{
+    background: linear-gradient(#ffffffd9, #ffffffd9);
+    color: var(--ink);
+    padding: 18px 16px;
+    font-size: clamp(12px, 2.2vw, 16px);
+  }
+
+
+  .tile{
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: #0b0d0f;
+    height: 110px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 8px;
+    text-transform: uppercase;
+  }
+  .tile span{
+    background: #ffffffde;
+    padding: 6px 8px;
+    border: 4px solid var(--ink);
+    box-shadow: 4px 4px 0 0 var(--shadow);
+    font-size: 12px;
+  }
+  .tile:focus-visible, .tile:hover span{ background:#fff; }
+
+  .t-upcoming{ background-image: url("upcoming-feature.jpg"); background-color: var(--glass); }
+  .t-extra   { background-image: url("extra.jpg");             background-color: var(--aqua);  }
+  .t-about   { background-image: url("about.jpg");             background-color: var(--amber); }
+
+
+  .notice, .stage, .tile span{ border-radius: 0; }
+  .notice.pixel-frame, .stage.pixel-frame, .tile span{ }
+
+
+  .notice{ border:6px solid var(--ink); box-shadow:8px 8px 0 0 var(--shadow); }
+  .stage { border:6px solid var(--ink); box-shadow:8px 8px 0 0 var(--shadow); }
+  .tile  { border:6px solid var(--ink); box-shadow:8px 8px 0 0 var(--shadow); }
+
+
+  @media (max-width: 900px){
+    .shell{
+      grid-template-columns: 1fr;
+    }
+    .stack.right, .stack.left{
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .tile, .notice{ height: 96px; min-width: 160px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">Bottle&nbsp;Container</div>
+</header>
+
+<main class="shell" aria-label="Homepage layout">
+  
+  <aside class="stack left" aria-label="Notices">
+    <div class="notice" aria-live="polite">NOTICE AREA 1<br>Use for alerts or promos</div>
+    <div class="notice">NOTICE AREA 2<br>Latest update summary</div>
+  </aside>
+
+  
+  <section class="stage" role="region" aria-label="Main stage with background video">
+    <video autoplay muted loop playsinline>
+      
+      <source src="your-video.mp4" type="video/mp4">
+     
+    </video>
+
+    
+    <div class="overlay">
+      <div class="card pixel-frame">
+        MAIN CONTENT • Welcome to <strong>Bottle Container</strong> — explore features on the right!
+      </div>
+    </div>
+  </section>
+
+  
+  <nav class="stack right" aria-label="Quick links">
+    <a class="tile t-upcoming" href="#upcoming" aria-label="Upcoming Features">
+      <span>Upcoming Features</span>
+    </a>
+    <a class="tile t-extra" href="#extra" aria-label="Extra">
+      <span>Extra</span>
+    </a>
+    <a class="tile t-about" href="#about" aria-label="About Section">
+      <span>About Section</span>
+    </a>
+  </nav>
+</main>
+
+
+<section id="upcoming" hidden></section>
+<section id="extra" hidden></section>
+<section id="about" hidden></section>
+
+</body>
+</html>
